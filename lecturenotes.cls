@@ -131,7 +131,8 @@
 
 %% Other new commands %%
 \newcommand{\concept}[2]{\parbox{\textwidth}{\raggedright \textbf{Concept: #1\\\emph{#2}}}}
-\newcommand{\response}[1]{\par\vspace{-1\baselineskip}\begin{custommargins}{3em}{0em}$\rightarrow$ #1\end{custommargins}}
+\newcommand{\response}[1]{\par\vspace{-1\baselineskip}\begin{custommargins}{3em}{0em}$\longrightarrow$ #1\end{custommargins}}
+\newcommand{\code}[1]{\texttt{#1}}
 
 \newcommand{\reset@minutes}{\minutes\z@}
 \newcommand{\recordsectionminutes}[2]{
@@ -140,7 +141,7 @@
 \newcommand{\writesectionminutes}[2]{%
 	\def\thistest{\csname minutes@\romannumeral#1 \endcsname}
 	\sectionminutes#2
-	\ifcsname minutes@\romannumeral#1 \endcsname \advance\sectionminutes by \thistest \typeout{YUP:\the\sectionminutes}\else
+	\ifcsname minutes@\romannumeral#1 \endcsname \advance\sectionminutes by \thistest \typeout{\the\sectionminutes}\else
   \ClassWarningNoLine{lecturenotes}{Section minutes might not have beed added correctly; I suggest re-running.}\fi
 %	\ifstrequal{\thistest}{}{\typeout{NOPE}}{\typeout{YUP: \thistest}}
 %	\advance\sectionminutes by \thistest}
