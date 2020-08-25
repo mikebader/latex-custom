@@ -5,17 +5,19 @@
 \LoadClassWithOptions{article}
 
 %% LOAD REQUIRED PACKAGES
-\RequirePackage{bibentry}
+%\RequirePackage{natbib}
 \RequirePackage{booktabs}
 \RequirePackage[left=1.4in,right=1.2in,top=1in,bottom=1in]{geometry}
-\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+% \RequirePackage{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\RequirePackage{hyperref}
+\RequirePackage{natbib, bibentry}
 \RequirePackage{ifthen}
-\RequirePackage{natbib}
 \RequirePackage{titlesec}
 \RequirePackage{tabularx}
 \RequirePackage{xcolor}
 
-%% DEFINE GLOBAL VARIABLES 
+% DEFINE GLOBAL VARIABLES 
 \global\let\@office\@empty
 \newcommand{\office}[1]{\def\@office{#1}}
 \global\let\@coursenumber\@empty
@@ -55,7 +57,7 @@
 	\begin{minipage}{.5\textwidth}
 		\raggedleft
 		\@author \\
-		\@email \\
+		\ifthenelse{\equal{\@email}{}}{}{\@email\\}
 		\@office \\
 	\end{minipage}
 	\parindent 3em
@@ -91,7 +93,7 @@
 \renewcommand{\labelitemi}{{\rmfamily \textbullet}} % Prevents problem with bullet in tgheros
 \renewcommand{\familydefault}{\sfdefault} % Makes the default text sans serif
 
-%% Url appearance
+% Url appearance
 \def\UrlFont{\bfseries}
 \hypersetup{
     colorlinks = true,
@@ -122,7 +124,7 @@
 
 %% Readings: define `reading` environment to include list of readings
 \newenvironment{readings}{\par
-	\noindent \textsl{Readings:}\vspace{-.5\baselineskip}\begin{itemize}\parskip 3pt \itemsep0em
+	\noindent \textit{Readings:}\vspace{-.5\baselineskip}\begin{itemize}\parskip 3pt \itemsep0em
 	}{
 	\end{itemize}\vspace{-.5\baselineskip}
 	}
@@ -146,7 +148,7 @@
 %% class policies: Make way to load class policies from policies.txt file
 \newcommand{\@policies}{}
 \newcommand{\policy}[2]{%
-     \g@addto@macro\@policies{\subsection{#1} #2}
+     \g@addto@macro\@policies{\subsection{#1} \parbox{\dimexpr\linewidth-2\fboxsep}{#2}}
 }
 \newcommand{\showpolicies}{
 \InputIfFileExists{policies}{}{}
@@ -166,7 +168,7 @@
 \newcommand{\showgrades}{\input{grades}}
 
 
-%% BIBLIOGRAPHY
+% BIBLIOGRAPHY
  \makeatletter 
  \renewcommand\BR@b@bibitem[2][]{\BR@bibitem[#1]{#2}\BR@c@bibitem{#2}}           
  \makeatother
