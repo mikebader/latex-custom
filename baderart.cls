@@ -81,7 +81,7 @@
 
 %% Legacy packages
 %% not sure if all are currently necessary
-\RequirePackage{datetime}
+\RequirePackage[en-US]{datetime2} % Nice date printing
 \RequirePackage{epstopdf}    % Convert EPS file to PDF
 \RequirePackage{lastpage}    % Allows page x of y
 
