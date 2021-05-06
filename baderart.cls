@@ -36,7 +36,7 @@
 \RequirePackage{caption}
 \RequirePackage{graphicx}
 \RequirePackage{siunitx}
-\RequirePackage{ulem}
+\RequirePackage[normalem]{ulem}
 \RequirePackage{colortbl}
 \RequirePackage{multirow}
 \RequirePackage{hhline}
