@@ -29,6 +29,10 @@
 \RequirePackage{titlesec}
 \RequirePackage{xcolor}
 \RequirePackage[normalem]{ulem}
+\RequirePackage{longtable}
+\RequirePackage{array}
+\RequirePackage{multirow}
+\RequirePackage{calc}
 
 
 %% DEFINE GLOBAL VARIABLES 
