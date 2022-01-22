@@ -45,6 +45,10 @@
 \global\let\@duedate\@empty
 \newcommand{\duedate}[2][Due: ]{\def\@duedate{#1#2}}
 \global\let\theauthor\@author
+\global\let\@office\@empty
+\newcommand{\office}[1]{\def\@office{#1}}
+\global\let\@email\@empty
+\newcommand{\email}[1]{\def\@email{\href{#1}#1}}
 
 %% FONTS %%
 \RequirePackage[math]{iwona}
