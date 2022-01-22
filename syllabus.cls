@@ -9,8 +9,7 @@
 \RequirePackage{booktabs}
 \RequirePackage[left=1.4in,right=1.2in,top=1in,bottom=1in]{geometry}
 % \RequirePackage{hyperref}
-\PassOptionsToPackage{hyphens}{url}
-\RequirePackage{hyperref}
+\PassOptionsToPackage{hyphens}{url}\RequirePackage{hyperref}
 \RequirePackage{natbib, bibentry}
 \RequirePackage{ifthen}
 \RequirePackage{titlesec}
@@ -28,13 +27,13 @@
 \newcommand{\classtime}[1]{\def\@classtime{#1}}
 \global\let\@classroom\@empty
 \newcommand{\classroom}[1]{\def\@classroom{#1}}
-\global\let\@coursename\@empty
-\newcommand{\coursename}[1]{
-	\def\@coursename{#1}
-	\title{\@coursename}
+\global\let\@coursetitle\@empty
+\newcommand{\coursetitle}[1]{
+	\def\@coursetitle{#1}
+	\title{\@coursetitle}
 	}
 \global\let\@email\@empty
-\newcommand{\email}[1]{\def\@email{#1}}
+\newcommand{\email}[1]{\def\@email{\href{mailto:#1}{#1}}}
 \global\let\@phone\@empty
 \newcommand{\phone}[1]{\def\@phone{#1}}
 
@@ -44,7 +43,7 @@
 \renewcommand\@maketitle{
 	\parindent 0pt
 	\addtolength{\leftskip}{-.4in}
-	\textbf{\@coursename}\\
+	\textbf{\@coursetitle}\\
 	\textbf{\@coursenumber}
 	\vspace{.25\baselineskip}
 
@@ -75,7 +74,7 @@
 
 \fancypagestyle{fncy}{%
 \fancyhf{}
-\fancyhead[L]{\small \bfseries \@coursename}
+\fancyhead[L]{\small \bfseries \@coursetitle}
 \fancyhead[R]{\small \bfseries \@coursenumber}
 \fancyfoot[R]{\small \bfseries \thepage}
 \addtolength{\headheight}{2pt}
@@ -128,7 +127,11 @@
 	}{
 	\end{itemize}\vspace{-.5\baselineskip}
 	}
-
+\newenvironment{suggested}{\par
+	\noindent \textit{Suggested:}\vspace{-.5\baselineskip}\begin{itemize}\parskip 3pt \itemsep0em
+	}{
+	\end{itemize}\vspace{-.5\baselineskip}
+	}
 %% NEW COMMANDS
 %% week: Define how weekly entries appear in syllabus
 \newcommand{\week}[2][]{
