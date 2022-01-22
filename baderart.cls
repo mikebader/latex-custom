@@ -288,7 +288,7 @@
 
     % Table of author/affiliation
     \begin{tabular}[t]{l}\@author\end{tabular}%
-    \par\vspace{0cm}%
+    \par\vspace{1cm}%
     {\@date\unskip\strut\par}\vspace{-.25cm}%
   \end{flushleft}%
 }
