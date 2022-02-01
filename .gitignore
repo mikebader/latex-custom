@@ -1,2 +1,6 @@
 texput.log
 .swp
+
+# Do not include signature file
+Signature.*
+signature.*

@@ -37,9 +37,13 @@
 \RequirePackage{hyperref}
 
 
-% set AU brand guidelines
-\definecolor{AUred}{HTML}{ED193A}
-\definecolor{AUblue}{HTML}{004FA2}
+% set JHU brand guidelines
+\definecolor{JHUblue}{HTML}{002D72}
+
+\hypersetup {
+  colorlinks = true,
+  allcolors = JHUblue
+}
 
 \newcommand{\dept}{Department of 
   \ifthenelse{\boolean{@policy}}{Public Administration \& Policy}{Sociology}
@@ -47,17 +51,17 @@
 
 
 \def\myauthor{Michael Bader}
-\def\mytitle{Associate Professor of Sociology and Policy}
+\def\mytitle{Associate Professor of Sociology}
 \def\mycopyright{\myauthor}
 \def\mybibliostyle{plain}
 \def\mysubtitle{}
-\def\myaffiliation{American University}
-\def\myphone{(202) 885-2433}
-\def\myfax{(202) 885-2477}
-\def\myemail{bader@american.edu}
+\def\myaffiliation{Johns Hopkins University}
+\def\myphone{}
+\def\myfax{}
+\def\myemail{mbader@jhu.edu}
 \def\myversion{}
 \def\myrevision{}
-\def\myaddress{Watkins Hall G13, 4400 Massachusetts Ave., NW, Washington, DC 20016, USA\\Phone:\myphone~|~Fax:\myfax}
+\def\myaddress{Mergenthaler Hall 540, 3400 N. Charles Street, Baltimore, MD 21218}
 
 
 \setlength{\topmargin}{-1.5cm}
@@ -66,9 +70,9 @@
 \newsavebox{\universitylogo}
 
 \sbox{\universitylogo}{\parbox{0.75\paperwidth}{
-     \includegraphics[scale=0.55]{/Users/bader/work/professional/assets/au_logo_h_1.png} \\[-1.3em]
-        {\color{AUred}\hrule}
-        \raggedleft{\raisebox{-.75em}{\color{AUblue}\scriptsize\scshape\dept}}
+     \includegraphics[scale=0.55]{/Users/mike/work/professional/_jhu_assets/krieger/logo/PDF/krieger.logo.horizontal.blue.pdf} \\[-2.3em]
+        {\color{JHUblue}\hrule}
+        \raggedleft{\raisebox{-.75em}{\color{JHUblue}\scriptsize\scshape\dept}}
 
 }}
 		
@@ -78,7 +82,7 @@
 % create box for footer
 \newsavebox{\deptaddress}
 \sbox{\deptaddress}{\parbox{\paperwidth}{
-  \centering\color{AUblue}\scriptsize\scshape \myaddress}}
+  \centering\color{JHUblue}\scriptsize\scshape \myaddress}}
 
 
 \newcounter{figure}
@@ -143,5 +147,5 @@
 	\ifthenelse{\boolean{@sign}}{\includegraphics[height=4em]{signature.jpg}\\}{\bigskip \bigskip \bigskip \bigskip \bigskip \ifthenelse{\equal{#1}{}}{}{{ }\\}}	
 	\raggedright \fromsig}}
 
-\signature{Michael D.~M.~Bader\\Associate Professor of Sociology and Policy\\\url{bader@american.edu}}
+\signature{Michael D.~M.~Bader\\Associate Professor of Sociology\\\url{mbader@jhu.edu}}
 	
