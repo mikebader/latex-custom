@@ -189,6 +189,11 @@
 \renewcommand{\footrulewidth}{0pt}
 \renewcommand{\headrulewidth}{0pt}
 
+%% LANDSCAPING PAGES
+\RequirePackage{pdflscape}
+\newcommand{\blandscape}{\begin{landscape}} % Prevents problems in pandoc
+\newcommand{\elandscape}{\end{landscape}}   % interpreting markdown in 
+                                            % landscape environments
 
 %% SECTION HEADING STYLES
 %% Follows American Sociological Association styles
