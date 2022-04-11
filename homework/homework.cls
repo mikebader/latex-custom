@@ -33,6 +33,7 @@
 \RequirePackage{array}
 \RequirePackage{multirow}
 \RequirePackage{calc}
+\RequirePackage{enumitem}
 
 
 %% DEFINE GLOBAL VARIABLES 
@@ -119,6 +120,15 @@
 \titlespacing*{\section}{-.4in}{1.5\baselineskip}{0pt}
 \titleformat{\subsection}{\sffamily \itshape}{}{0px}{}{\vspace{-2em}}
 \titlespacing*{\subsection}{-.4in}{.5\baselineskip}{0pt}
+
+%% LIST ENVIRONMENT FORMATS
+\setlist[description]{%
+  % topsep=30pt,               % space before start / after end of list
+  % itemsep=5pt,               % space between items
+  font={\normalfont\itshape}, % set the label font
+%  font={\bfseries\sffamily\color{red}}, % if colour is needed
+}
+
 
 %% NEWCOMMANDS
 \providecommand{\tightlist}{%
