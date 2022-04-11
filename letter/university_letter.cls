@@ -70,7 +70,7 @@
 \newsavebox{\universitylogo}
 
 \sbox{\universitylogo}{\parbox{0.75\paperwidth}{
-     \includegraphics[scale=0.55]{/Users/mike/work/professional/_jhu_assets/krieger/logo/PDF/krieger.logo.horizontal.blue.pdf} \\[-2.3em]
+     \includegraphics[scale=0.55]{krieger.logo.horizontal.blue.pdf} \\[-2.3em]
         {\color{JHUblue}\hrule}
         \raggedleft{\raisebox{-.75em}{\color{JHUblue}\scriptsize\scshape\dept}}
 
