@@ -9,7 +9,9 @@
 \RequirePackage{booktabs}
 \RequirePackage[left=1.4in,right=1.2in,top=1in,bottom=1in]{geometry}
 % \RequirePackage{hyperref}
-\PassOptionsToPackage{hyphens}{url}\RequirePackage{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\RequirePackage{hyperref}
+\RequirePackage[hyphens]{url}
 \RequirePackage{natbib, bibentry}
 \RequirePackage{ifthen}
 \RequirePackage{titlesec}
