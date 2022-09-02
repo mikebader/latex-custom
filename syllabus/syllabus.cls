@@ -143,6 +143,10 @@
 	 \refstepcounter{week}\vspace{\skip}\noindent\textbf{Week~\theweek \ifthenelse{\equal{#1}{}}{}{~(#1)}: #2} 
 	\refstepcounter{weekofunit}
 	}
+%% enquote is used by asr.bst to quote article titles and is defined in 
+%% asr.bst, but the definition occurring in asr.bst doesn't play nicely
+%% with bibentry, so define it here and use asr-syllabus.bst
+\newcommand{\enquote}[1]{``#1''}
 
 %% reading: Define rendering of a reading for class book
 \newcommand{\reading}[3][]{\citeauthor[{#3}]{{#2}}\ifthenelse{\NOT\equal{#1}{}}{ \textit{#1}}{}}
