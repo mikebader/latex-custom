@@ -51,7 +51,7 @@
 
 
 \def\myauthor{Michael Bader}
-\def\mytitle{Associate Professor of Sociology}
+\def\mytitle{Associate Professor of Sociology\\Director, 21st Century Cities Initiative}
 \def\mycopyright{\myauthor}
 \def\mybibliostyle{plain}
 \def\mysubtitle{}
@@ -70,7 +70,7 @@
 \newsavebox{\universitylogo}
 
 \sbox{\universitylogo}{\parbox{0.75\paperwidth}{
-     \includegraphics[scale=0.55]{krieger.logo.horizontal.blue.pdf} \\[-2.3em]
+     \includegraphics[height=1in]{krieger.logo.horizontal.blue.png} \\[-2.3em]
         {\color{JHUblue}\hrule}
         \raggedleft{\raisebox{-.75em}{\color{JHUblue}\scriptsize\scshape\dept}}
 
@@ -144,8 +144,8 @@
   \hspace*{4cm}
 	\parbox{\textwidth}{
 	\ifthenelse{\equal{#1}{}}{}{#1\\}
-	\ifthenelse{\boolean{@sign}}{\includegraphics[height=4em]{signature.jpg}\\}{\bigskip \bigskip \bigskip \bigskip \bigskip \ifthenelse{\equal{#1}{}}{}{{ }\\}}	
+	\ifthenelse{\boolean{@sign}}{\includegraphics[height=3em]{signature.jpg}\\}{\bigskip \bigskip \bigskip \bigskip \bigskip \ifthenelse{\equal{#1}{}}{}{{ }\\}}	
 	\raggedright \fromsig}}
 
-\signature{Michael D.~M.~Bader\\Associate Professor of Sociology\\\url{mbader@jhu.edu}}
+\signature{\myauthor\\\mytitle\\\url{\myemail}}
 	
