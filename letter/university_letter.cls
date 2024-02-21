@@ -33,7 +33,7 @@
 \RequirePackage{fontspec}
 \RequirePackage{xunicode}
 \RequirePackage{xcolor}
-\RequirePackage[hmargin=1.75in]{geometry}
+\RequirePackage[hmargin=1.5in]{geometry}
 \RequirePackage{hyperref}
 
 
