@@ -45,7 +45,7 @@
 \RequirePackage{threeparttable}
 \RequirePackage{wrapfig}
 \RequirePackage{adjustbox}
-\RequirePackage[%
+\PassOptionsToPackage{hyphens}{url}\RequirePackage[%
   pdftex,%
   bookmarks=true,%
   breaklinks=true,%
@@ -74,7 +74,6 @@
 \RequirePackage{subcaption}  % For multi-part figures
 \RequirePackage{setspace}    % Easily set line spacing
 \RequirePackage{color, soul} % Highlighting
-\RequirePackage{url}         % Pretty URLs
 
 %% Allow comments
 \RequirePackage{verbatim}    % Provides comment environment
@@ -96,7 +95,7 @@
 \newcommand{\sftext}{\fontseries{el}\selectfont\sffamily}
 
 %% BIBLIOGRAPHY
-\RequirePackage{natbib}
+% \RequirePackage{natbib}
 
 %% DEFINE ABSTRACT ENVIRONMENT %%%%%
 %% Keywords: creates \@keywords to be used in preamble to list keywords and
